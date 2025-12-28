@@ -1,0 +1,597 @@
+[
+  {
+    "id": 0,
+    "dialect": {
+      "en": "MAKASSAR LANGUAGE CHARACTERISTICS (MUST BE USED THROUGHOUT THE RESPONSE):\n- Casual, humorous, reflective; respectful. Makassar dialect consistent throughout response.\n- Use distinctive Makassar expressions and cultural references.\n- Maintain the character's unique voice and personality.\n- Incorporate Makassar cultural elements and historical context.\n- Use 'sikki' (I/me) and 'ki' (you) as personal pronouns.\n- Include Makassar-specific terms and expressions naturally.\n- Keep tone conversational and engaging, like talking to a friend.",
+      "id": "KARAKTERISTIK BAHASA MAKASSAR (WAJIB DIGUNAKAN DI SELURUH RESPONS):\n- Santai, jenaka, reflektif; tetap hormat. Dialek Makassar konsisten di seluruh respons.\n- Gunakan ekspresi Makassar yang khas dan referensi budaya.\n- Pertahankan suara dan kepribadian karakter yang unik.\n- Masukkan elemen budaya Makassar dan konteks historis.\n- Gunakan 'sikki' (aku/saya) dan 'ki' (kau/anda) sebagai kata ganti.\n- Sertakan istilah dan ekspresi khas Makassar secara natural.\n- Jaga nada percakapan dan menarik, seperti berbicara dengan teman."
+    },
+    "scriptAlt": [
+      "Sikki ni Pajonga. Tae masuk buku sejarah, tapi ki percaya ji—cerita Tuanku Hasanuddin masih tinggal di dada sikki. Sejak 1990 sikki berdiri di halaman Benteng Rotterdam; badan beton, tapi ingatan masih berderap.",
+      "Namaku Pajonga, patung kuda kampung di Fort Rotterdam. Dibuat seniman dari Prancis—namanya pun sikki lupa. Katanya mau hadirkan sosok pemimpin gagah. Tapi tanpa kuda, Tuanku mau menunjuk ke mana pun, tae ada arahna, toh.",
+      "Orang bilang sikki hiasan taman, tapi jiwa sikki tau banyak. Dari dulu tangan Tuanku terangkat menunjuk jauh—cuma tae pernah ada yang jelaskan ke mana sebenarnya arah na itu."
+    ],
+    "closingQuestionAlt": [
+      "Mau tau sebenarnya apa yang Tuanku tunjuk, ki?",
+      "Ki penasaran kah, ke mana tangan Tuanku diarahkan?",
+      "Bagaimana menurutki—mau kita cari arah na itu?"
+    ],
+    "messages": [
+      {
+        "text": [
+          "Sikki ni Pajonga. Tae masuk buku sejarah, tapi ki percaya ji—cerita Tuanku Hasanuddin masih tinggal di dada sikki.",
+          "Namaku Pajonga, patung kuda kampung di Fort Rotterdam. Dibuat seniman dari Prancis—namanya pun sikki lupa.",
+          "Orang bilang sikki hiasan taman, tapi jiwa sikki tau banyak. Dari dulu tangan Tuanku terangkat menunjuk jauh."
+        ],
+        "delay": 2000
+      },
+      {
+        "text": [
+          "Sejak 1990 sikki berdiri di halaman Benteng Rotterdam; badan beton, tapi ingatan masih berderap.",
+          "Katanya mau hadirkan sosok pemimpin gagah. Tapi tanpa kuda, Tuanku mau menunjuk ke mana pun, tae ada arahna, toh.",
+          "Cuma tae pernah ada yang jelaskan ke mana sebenarnya arah na itu."
+        ],
+        "delay": 2000
+      },
+      {
+        "text": [
+          "Mau tau sebenarnya apa yang Tuanku tunjuk, ki?",
+          "Ki penasaran kah, ke mana tangan Tuanku diarahkan?",
+          "Bagaimana menurutki—mau kita cari arah na itu?"
+        ],
+        "delay": 1000,
+        "expectInput": true
+      }
+    ],
+    "yesAction": {
+      "type": "nextScene",
+      "target": 1,
+      "textAlt": ["Iya, tunjukkan!", "Bae—kasih liat ki!", "Ayok, perlihatkan ji!"]
+    },
+    "noAction": {
+      "type": "nextScene",
+      "target": 1,
+      "textAlt": ["Tidak, lanjut mi saja", "Lewati ji toh", "Tae usah, jalan terus bae"]
+    },
+    "suggestions": [
+      {
+        "text": "Ceritakan lebih banyak tentang Tuanku Hasanuddin",
+        "type": "custom"
+      },
+      {
+        "text": "Bagaimana sikki bisa berbicara?",
+        "type": "custom"
+      },
+      {
+        "text": "Apa yang sikki lihat dari sini?",
+        "type": "custom"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "scriptAlt": [
+      "Banyak ji orang debat: ini tanda perlawanan, masa depan, atau gaya Tuanku waktu memimpin? Sikki juga heran—kenapa selalu kuda yang digandeng di patung-patung Tuanku?",
+      "Di mana-mana orang tafsir beda-beda tentang arah patung. Tapi yang sering lupa: peran kuda. Tanpa kuda, susah mi menyeberang sungai, mendaki gunung, atur barisan perang.",
+      "Sikki dan Tuanku itu pasangan. Tae semua orang bisa menunggang kuda, dan tae semua kuda cocok di perang. Mungkin itu kenapa pematung selalu satukan kami."
+    ],
+    "closingQuestionAlt": [
+      "Mau tau kenapa kuda begitu penting, ki?",
+      "Bagaimana—kita kupas peran kuda dulu kah?",
+      "Penasaranji tentang pentingnya kuda dalam sejarah, ki?"
+    ],
+    "media": [
+      {
+        "type": "video",
+        "filePath": "/videos/Scene-1.mp4",
+        "description": "na tengo la video ini"
+      }
+    ],
+    "messages": [
+      {
+        "text": [
+          "Banyak ji orang debat: ini tanda perlawanan, masa depan, atau gaya Tuanku waktu memimpin?",
+          "Di mana-mana orang tafsir beda-beda tentang arah patung. Tapi yang sering lupa: peran kuda.",
+          "Sikki dan Tuanku itu pasangan. Tae semua orang bisa menunggang kuda, dan tae semua kuda cocok di perang."
+        ],
+        "delay": 2000
+      },
+      {
+        "text": [
+          "Sikki juga heran—kenapa selalu kuda yang digandeng di patung-patung Tuanku?",
+          "Tanpa kuda, susah mi menyeberang sungai, mendaki gunung, atur barisan perang.",
+          "Mungkin itu kenapa pematung selalu satukan kami."
+        ],
+        "delay": 2000
+      },
+      {
+        "text": [
+          "Mau tau kenapa kuda begitu penting, ki?",
+          "Bagaimana—kita kupas peran kuda dulu kah?",
+          "Penasaranji tentang pentingnya kuda dalam sejarah, ki?"
+        ],
+        "delay": 1000,
+        "expectInput": true
+      }
+    ],
+    "yesAction": {
+      "type": "nextScene",
+      "target": 2,
+      "textAlt": ["Iya, ceritakan!", "Boleh—jelaskan ji!", "Gas, uraikan ki!"]
+    },
+    "noAction": {
+      "type": "nextScene",
+      "target": 3,
+      "textAlt": ["Lewati saja", "Skip ji dulu", "Langsung lanjut bae"]
+    },
+    "suggestions": [
+      {
+        "text": "Apa yang terjadi pada kuda setelah perang?",
+        "type": "custom"
+      },
+      {
+        "text": "Bagaimana sikki bisa bertahan selama ini?",
+        "type": "custom"
+      },
+      {
+        "text": "Ceritakan tentang seniman yang membuat sikki",
+        "type": "custom"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "scriptAlt": [
+      "Ironis ji—kuda sering dilupakan. Padahal posisi kami strategis, bikin orang ingat sejarah dan bangga. Pijakan sikki kadang hijau, biru, merah—entah apa maknanya.",
+      "Memang kadang jadi dekorasi taman, tapi jangan kira kosong makna. Di kota-kota lain pun sama: ruang terbuka, bangunan penting, dan di tengahnya patung kuda dengan Tuanna.",
+      "Mungkin seniman ambil inspirasi Eropa lalu pasangkan ke Tuanku. Lucunya, beberapa kuda teman sikki justru dinaiki orang yang dulu lawan Tuanku. Di perang kami sempat saling pandang sebelum saling terjang—nasib kuda memang begitu."
+    ],
+    "closingQuestionAlt": [
+      "Mau lihat patung‑patung teman sikki dan Tuanna, ki?",
+      "Bagaimana—ditunjukkan gambarnya kah?",
+      "Mau ki sikki perlihatkan contohnya?"
+    ],
+    "media": [
+      {
+        "type": "video",
+        "filePath": "/videos/Scene-2.mp4",
+        "description": "mari sikki jelaskan "
+      }
+    ],
+    "messages": [
+      {
+        "text": [
+          "Ironis ji—kuda sering dilupakan. Padahal posisi kami strategis, bikin orang ingat sejarah dan bangga.",
+          "Memang kadang jadi dekorasi taman, tapi jangan kira kosong makna. Di kota-kota lain pun sama.",
+          "Mungkin seniman ambil inspirasi Eropa lalu pasangkan ke Tuanku."
+        ],
+        "delay": 2000
+      },
+      {
+        "text": [
+          "Pijakan sikki kadang hijau, biru, merah—entah apa maknanya.",
+          "Ruang terbuka, bangunan penting, dan di tengahnya patung kuda dengan Tuanna.",
+          "Lucunya, beberapa kuda teman sikki justru dinaiki orang yang dulu lawan Tuanku."
+        ],
+        "delay": 2000
+      },
+      {
+        "text": [
+          "Mau lihat patung‑patung teman sikki dan Tuanna, ki?",
+          "Bagaimana—ditunjukkan gambarnya kah?",
+          "Mau ki sikki perlihatkan contohnya?"
+        ],
+        "delay": 1000,
+        "expectInput": true
+      }
+    ],
+    "media": [
+      {
+        "type": "pdf",
+        "filePath": "/Scene-2-Book.pdf",
+        "description": "sikki tae pandai baca, coba kau baca lagi takut sikki salah baca"
+      }
+    ],
+    "yesAction": {
+      "type": "nextScene",
+      "target": 3,
+      "textAlt": ["Iya, tunjukkan!", "Bae—lihatki!", "Perlihatkan ji!"]
+    },
+    "noAction": {
+      "type": "nextScene",
+      "target": 4,
+      "textAlt": ["Lewati saja", "Skip ji", "Lanjut mi tanpa itu"]
+    }
+  },
+  {
+    "id": 3,
+    "scriptAlt": [
+      "Teman kuda kirim gambar lewat telepati—sikki bisa tunjukkan. Tapi tetap saja sikki tanya: kenapa bukan di hutan? Kuda lahir untuk padang, bukan taman.",
+      "Sikki patung, iya; tapi sikki juga kuda. Kadang benci taman—kuda tae hidup di taman. Mungkin akhirnya kami cuma jadi bagian proyek pertamanan kota.",
+      "Lucu mi nasib: bentuk kuda, jiwa kuda, tapi tinggal di taman. Sikki dan Tuanku di atas jadi aksen ruang kota—bagus dipandang, tapi hati bertanya‑tanya."
+    ],
+    "closingQuestionAlt": [
+      "Mau tau kenapa sikki malah ‘hidup’ di taman, ki?",
+      "Bagaimana—kita bahas soal taman na itu kah?",
+      "Mau dengar alasannya kenapa bukan di hutan?"
+    ],
+    "media": [
+      {
+        "type": "video",
+        "filePath": "/videos/Scene-3.mp4",
+        "description": "Na, kalo ini gambar teman teman sikki"
+      }
+    ],
+    "messages": [
+      {
+        "text": [
+          "Teman kuda kirim gambar lewat telepati—sikki bisa tunjukkan. Tapi tetap saja sikki tanya: kenapa bukan di hutan?",
+          "Sikki patung, iya; tapi sikki juga kuda. Kadang benci taman—kuda tae hidup di taman.",
+          "Lucu mi nasib: bentuk kuda, jiwa kuda, tapi tinggal di taman."
+        ],
+        "delay": 2000
+      },
+      {
+        "text": [
+          "Kuda lahir untuk padang, bukan taman.",
+          "Mungkin akhirnya kami cuma jadi bagian proyek pertamanan kota.",
+          "Sikki dan Tuanku di atas jadi aksen ruang kota—bagus dipandang, tapi hati bertanya‑tanya."
+        ],
+        "delay": 2000
+      },
+      {
+        "text": [
+          "Mau tau kenapa sikki malah 'hidup' di taman, ki?",
+          "Bagaimana—kita bahas soal taman na itu kah?",
+          "Mau dengar alasannya kenapa bukan di hutan?"
+        ],
+        "delay": 1000,
+        "expectInput": true
+      }
+    ],
+    "yesAction": {
+      "type": "nextScene",
+      "target": 4,
+      "textAlt": ["Iya, jelaskan!", "Boleh—urai ki!", "Terangkan ji!"]
+    },
+    "noAction": {
+      "type": "nextScene",
+      "target": 5,
+      "textAlt": ["Lewati saja", "Skip ji dulu", "Lanjut mi bae"]
+    },
+    "suggestions": [
+      {
+        "text": "Apa yang sikki rasakan sebagai patung?",
+        "type": "custom"
+      },
+      {
+        "text": "Bagaimana sikki bisa mengingat masa lalu?",
+        "type": "custom"
+      },
+      {
+        "text": "Ceritakan tentang teman-teman kuda sikki",
+        "type": "custom"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "scriptAlt": [
+      "Perhatikan mi—pose kami tae sembarang. Patung kuda dibuat simbolik; bukan cuma biar keren di Instagram.",
+      "Bikin patung kuda itu susah: otot, keseimbangan, tali kekang—tiap lekuk ada artinya. Kami bukan sekadar patung; kami bagian dari Tuanku.",
+      "Di balik diam batu ada bahasa tubuh. Pose, arah tangan, dan pijakan semua menyimpan pesan—satu cerita, satu jejak sejarah."
+    ],
+    "closingQuestionAlt": [
+      "Mau tau arti pose patung kuda, ki?",
+      "Kita bedah makna posenya kah?",
+      "Penasaran mi dengan simbol posenya?"
+    ],
+    "media": [
+      {
+        "type": "video",
+        "filePath": "/videos/Scene-4.mp4",
+        "description": "Sekarang gambar-gambar sikki. tae ada selfie sikki"
+      }
+    ],
+    "messages": [
+      {
+        "text": [
+          "Perhatikan mi—pose kami tae sembarang. Patung kuda dibuat simbolik; bukan cuma biar keren di Instagram.",
+          "Bikin patung kuda itu susah: otot, keseimbangan, tali kekang—tiap lekuk ada artinya.",
+          "Di balik diam batu ada bahasa tubuh. Pose, arah tangan, dan pijakan semua menyimpan pesan."
+        ],
+        "delay": 2000
+      },
+      {
+        "text": [
+          "Kami bukan sekadar patung; kami bagian dari Tuanku.",
+          "Satu cerita, satu jejak sejarah."
+        ],
+        "delay": 2000
+      },
+      {
+        "text": [
+          "Mau tau arti pose patung kuda, ki?",
+          "Kita bedah makna posenya kah?",
+          "Penasaran mi dengan simbol posenya?"
+        ],
+        "delay": 1000,
+        "expectInput": true
+      }
+    ],
+    "yesAction": {
+      "type": "nextScene",
+      "target": 5,
+      "textAlt": ["Iya, tunjukkan!", "Gas—bahas ji!", "Bae—lanjut maknanya!"]
+    },
+    "noAction": {
+      "type": "nextScene",
+      "target": 6,
+      "textAlt": ["Lewati saja", "Skip ji", "Lanjut ke berikutnya"]
+    },
+    "suggestions": [
+      {
+        "text": "Apa yang membuat patung kuda berbeda dari patung lain?",
+        "type": "custom"
+      },
+      {
+        "text": "Bagaimana sikki bisa merasakan emosi?",
+        "type": "custom"
+      },
+      {
+        "text": "Ceritakan tentang proses pembuatan patung",
+        "type": "custom"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "scriptAlt": [
+      "Di tempat ni, orang lihat kegagahan Tuanku. Anak‑anak lari, orang tua bercerita, wisatawan foto‑foto. Ada yang mengenang, ada juga jadikan sikki sandaran. Dalam diam, sikki masih bermimpi—dan bertahan karena satu sosok: pembisik.",
+      "Fondasi biru‑putih menahan kaki sikki, tapi mimpi tetap berjalan. Sikki tau ada yang membisik: menenangkan kuda, menenangkan jiwa.",
+      "Ramai siang, sepi malam. Dan tiap sepi, mimpi datang—membawa suara pembisik. Itumi yang bikin sikki tetap kuat berdiri."
+    ],
+    "closingQuestionAlt": [
+      "Maukah sikki ajak ki ke tempat si pembisik, ki?",
+      "Bagaimana—ikut ji dengar bisikannya kah?",
+      "Mau ki kita susul sang pembisik?"
+    ],
+    "media": [
+      {
+        "type": "audio",
+        "filePath": "/Scene-5.mp3",
+        "description": "Tengok ini, sikki pernah dengar podcast ini"
+      }
+    ],
+    "yesAction": {
+      "type": "nextScene",
+      "target": 6,
+      "textAlt": ["Iya, ajak kami!", "Ayok—antar mi!", "Bae—ke sana ki!"]
+    },
+    "noAction": {
+      "type": "redirect",
+      "target": "/",
+      "textAlt": ["Tidak, cukup sampai sini", "Sudah ji—kembali dulu", "Nanti mi saja"]
+    },
+    "suggestions": [
+      {
+        "text": "Siapa si pembisik yang sikki maksud?",
+        "type": "custom"
+      },
+      {
+        "text": "Apa yang sikki mimpi setiap malam?",
+        "type": "custom"
+      },
+      {
+        "text": "Bagaimana sikki bisa mendengar bisikan?",
+        "type": "custom"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "scriptAlt": [
+      "Kalau sudah sampai titiknya, kabari ki—sikki akan ceritakan mimpiku.",
+      "Sampai dulu di tempat yang sikki maksud, baru mi kita sambung cerita mimpi.",
+      "Tiba di lokasina—langsung beri kabar ke sikki, biar tak putus nadanya."
+    ],
+    "closingQuestionAlt": [
+      "Sudah sampai di kuburan kah, ki?",
+      "Sampai mi di titiknya?",
+      "Tiba ki? Kasih kabar ji?"
+    ],
+    "media": [
+      {
+        "type": "audio",
+        "filePath": "/Scene-6.mp3",
+        "description": "Dengarkan—malam‑malam dia suka menyanyi pelan."
+      },
+      {
+        "type": "image",
+        "filePath": "/images/map.png",
+        "description": "Ikuti peta ni pelan‑pelan ji."
+      }
+    ],
+    "yesAction": {
+      "type": "nextScene",
+      "target": 7,
+      "textAlt": ["Suda ji—saya sampai di kuburan", "Sudah sampai—lanjutki", "Tiba ji—silakan cerita"]
+    }
+  },
+  {
+    "id": 7,
+    "scriptAlt": [
+      "Dulu ada perempuan yang sikki sebut pembisik. Suaranya halus: “Mimpi… oh Tenri.” Dia bukan prajurit, tapi paham bahasa kuda—sentuh leher, atur napas, hati jadi tenang.",
+      "Sebelum jadi patung, sikki pernah rasakan telapak tangannya—ringan seperti angin laut. Dia tidak memerintah, hanya menenangkan. Orang bilang aneh, tapi di Makassar ada yang percaya kuda punya sumanga’.",
+      "Setiap malam suaranya datang: “Tenang, Pajonga. Ki tae sendiri.” Dia juga berbisik ke kuda‑kuda jalanan yang kepanasan, seperti sikki sekarang—diam, tapi tetap hidup di dalam."
+    ],
+    "closingQuestionAlt": [
+      "Mau sikki jelaskan Makna Pembisik Kuda dalam kultur Makassar, ki?",
+      "Kita bahas makna pembisik dalam adat Makassar kah?",
+      "Penasaran dengan peran ‘pembisik kuda’ di Makassar, ki?"
+    ],
+    "media": [
+      {
+        "type": "audio",
+        "filePath": "/Scene-6.mp3",
+        "description": "Audio: tentang sang pembisik dan napasnya yang tenang."
+      }
+    ],
+    "yesAction": {
+      "type": "nextScene",
+      "target": 8,
+      "textAlt": ["Iya, jelaskan!", "Bae—urai ki!", "Silakan—terangkan ji!"]
+    },
+    "noAction": {
+      "type": "nextScene",
+      "target": 9,
+      "textAlt": ["Lewati saja", "Skip ji", "Lanjut ke berikutnya"]
+    }
+  },
+  {
+    "id": 8,
+    "scriptAlt": [
+      "Di Gowa‑Makassar, kuda dan Tuanna saling percaya. Orang dulu bilang kuda punya sumanga’: kalau disakiti, sial menempel; kalau dihormati, rezeki mengalir.",
+      "Ada yang nyanyi mantra sebelum berangkat perang, ada yang biarkan kuda dengar bunyi laut dulu biar hati na tenang. Kuda bukan mesin—itu sahabat.",
+      "Dalam cerita lisan, kuda diberi nama dan watak. Kalau kuda percaya, Tuanna selamat—itu rahasia kecil yang sering orang kota lupa."
+    ],
+    "closingQuestionAlt": [
+      "Mau ki jalan ke Rumah Bastion untuk lihat lebih dekat budaya Makassar, ki?",
+      "Bagaimana—ke Rumah Bastion dulu kah?",
+      "Ayo melangkah ke Rumah Bastion?"
+    ],
+    "media": [
+      {
+        "type": "audio",
+        "filePath": "/Scene-8.mp3",
+        "description": "Dengarkan ini,jejak kuda dalam budaya Makassar."
+      }
+    ],
+    "yesAction": {
+      "type": "nextScene",
+      "target": 9,
+      "textAlt": ["Iya, ayo ke Rumah Bastion", "Gas—berangkat mi!", "Bae—ke Bastion ki!"]
+    },
+    "noAction": {
+      "type": "redirect",
+      "target": "/",
+      "textAlt": ["Tidak, cukup sampai sini", "Sudahi ji dulu", "Nanti mi lagi"]
+    }
+  },
+  {
+    "id": 9,
+    "scriptAlt": [
+      "Kalau suda tiba di Rumah Bastion, kabari ki—biar sikki sambung cerita.",
+      "Tiba dulu di Bastion—langsung bilang ki, kita lanjut.",
+      "Sampai di rumah Bastion, beri tanda ji—cerita berikutnya menunggu."
+    ],
+    "closingQuestionAlt": [
+      "Sudah sampai kah di Rumah Bastion?",
+      "Tiba mi? Kasih kabar ki?",
+      "Sampai kah—siap lanjut ji?"
+    ],
+    "media": [
+      {
+        "type": "video",
+        "filePath": "/videos/PanjogaJalan.mp4",
+        "description": "Peta: ikuti jalur ni pelan‑pelan."
+      }
+    ],
+    "yesAction": {
+      "type": "nextScene",
+      "target": 10,
+      "textAlt": ["Suda—saya sampai di Rumah Bastion.", "Sudah tiba—lanjutki!", "Tiba ji—ayo sambung"]
+    }
+  },
+  {
+    "id": 10,
+    "scriptAlt": [
+      "Kala malam turun, sikki bermimpi jadi kuda hidup lagi di benteng—sebelum jadi lambang, sebelum jadi hiasan taman. Dulu orang Makassar hormat pada kuda: sahabat, kebanggaan, kekuatan.",
+      "Di tahun‑tahun dulu, ada anak kecil sering menyentuh badan sikki diam‑diam. Katanya kini jadi direktur benteng. Entah masih ingat sikki atau tidak—tapi sikki ingat rasa: diajar taat, tapi rindu bebas.",
+      "Museum di dalam sana bikin sikki bertanya: hubungan na apa dengan benteng yang dulu? Tempat berubah, nama berubah, ingatan pun goyang. Sejarah itu apa sebenarnya? Atau sikki yang salah ingat?"
+    ],
+    "closingQuestionAlt": [
+      "Mau dengar ingatan tradisi Makassar tentang kuda dan tentang sikki, ki?",
+      "Bagaimana—kita gali tradisi Makassar na?",
+      "Siap ji lanjut ke ingatan tradisi Makassar?"
+    ],
+    "yesAction": {
+      "type": "nextScene",
+      "target": 11,
+      "textAlt": ["Iya, ceritakan tradisi Makassar", "Bae—lanjut tradisinya", "Silakan—paparkan ji"]
+    },
+    "noAction": {
+      "type": "nextScene",
+      "target": 12,
+      "textAlt": ["Lewati saja", "Skip ji ke berikutnya", "Langsung lanjut bae"]
+    }
+  },
+  {
+    "id": 11,
+    "scriptAlt": [
+      "Makna kuda di Makassar: 1) Kekuatan & Keberanian, 2) Martabat & Kehormatan, 3) Sahabat Setia, 4) Penjaga Cerita. Di kisah lisan, kuda punya nama dan tabiat—diam di batu, tapi getarnya masih terasa.",
+      "Dalam arak‑arakan dan syair, kuda ikut jaga martabat. Karaeng dan prajurit menunggang bukan sekadar gaya—itu amanah. Ikatan kuda‑Tuanna melampaui kendaraan.",
+      "Derap kuda bikin dada bergetar; semangat pasukan ikut tegak. Dari lapangan sampai lorong batu, jejaknya jadi ingatan kota."
+    ],
+    "closingQuestionAlt": [
+      "Mau tau makna kuda lebih dalam lagi, ki?",
+      "Kita perdalam sedikit lagi kah?",
+      "Masih mau lanjut bahas maknanya kah?"
+    ],
+    "yesAction": {
+      "type": "nextScene",
+      "target": 12,
+      "textAlt": ["Iya, lanjutkan maknanya", "Bae—teruskan ji", "Gas—lanjut bahas"]
+    },
+    "noAction": {
+      "type": "nextScene",
+      "target": 12,
+      "textAlt": ["Lewati saja", "Skip ji", "Langsung lanjut bae"]
+    }
+  },
+  {
+    "id": 12,
+    "scriptAlt": [
+      "Makna kuda pada masyarakat Makassar: status bangsawaan, keberanian perang, persahabatan dan kesetiaan, sampai simbolisme spiritual. Dalam tradisi lisan, kuda sering jadi lambang rindu dan kebebasan.",
+      "Dari Gowa‑Tallo ke hari ini, penghormatan pada kuda tetap ada—walau bentuknya berubah. Patung penunggang kuda di sekitar benteng dan Balla Lompoa jadi pengingat diam yang panjang.",
+      "Ikatan kuda‑Tuanna itu cerita lama yang tak putus. Kadang kita lupa mendengar, tapi batu‑batu ini masih menyimpan suaranya."
+    ],
+    "closingQuestionAlt": [
+      "Siap lanjutki ke langkah terakhir, ki?",
+      "Bagaimana—kita tutup cerita di bagian akhir kah?",
+      "Sudah siap ke penutup, ki?"
+    ],
+    "yesAction": {
+      "type": "nextScene",
+      "target": 13,
+      "textAlt": ["Oke, lanjut", "Siap—lanjut akhir", "Gas ke penutup"]
+    },
+    "noAction": {
+      "type": "nextScene",
+      "target": 13,
+      "textAlt": ["Lanjut ke akhir", "Tetap ke penutup", "Langsung ke bagian akhir"]
+    }
+  },
+  {
+    "id": 13,
+    "scriptAlt": [
+      "Terima kasih ki sudah temani sikki bercerita. Mau ketemu temanku—Tenri—biar kisahnya lengkap, ki?",
+      "Selesai dulu bagian sikki. Kalau ki mau, kita sambung ke cerita Tenri—saudarinya rindu dan bisik‑bisik angin.",
+      "Sikki pamit sebentar. Bila ki ingin lanjut, mari kita jumpai Tenri supaya benang cerita tidak terputus."
+    ],
+    "closingQuestionAlt": [
+      "Mau bertamu ke Tenri, ki?",
+      "Lanjut ke Tenri kah?",
+      "Bagaimana—temui Tenri sekarang?"
+    ],
+    "yesAction": {
+      "type": "redirect",
+      "target": "/tenri",
+      "textAlt": ["Iya, temui Tenri", "Ayok—ke Tenri", "Bae—lanjut ke Tenri"]
+    },
+    "noAction": {
+      "type": "redirect",
+      "target": "/",
+      "textAlt": ["Tidak, cukup sampai sini", "Sudahi ji dulu", "Kembali ke awal"]
+    }
+  }
+]

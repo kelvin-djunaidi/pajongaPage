@@ -1,0 +1,258 @@
+[
+  {
+    "id": 0,
+    "script": "",
+    "messages": [
+      { "text": ["Namaku Pajonga, bukan siapa-siapa dalam buku sejarah. "], "delay": 4000 },
+      { "text": ["Tapi aku tahu segalanya tentang Sultan Hasanuddin. Beliau menunggangiku, tubuhku terbuat dari beton, dan aku berdiri tegak sejak tahun 1990 di halaman Benteng Rotterdam, Makassar."], "delay": 10000 },
+      { "text": ["Aku dibuat oleh seorang seniman dari Prancis, aku tak kenal namanya, seniman ini sama tidak terkenalnya seperti aku. Tapi katanya dia ingin menghadirkan sosok pemimpin yang gagah berani lewat karya seni. Tapi tanpa aku, Sultan Hasanudin,  tak akan punya arah."], "delay": 10000 },
+      { "text": ["Aku tidak tahu kenapa tuanku—Sultan Hasanuddin—mengangkat tangannya dan menunjuk ke suatu tempat. Sejak aku berdiri di sini, tak ada yang menjelaskan ke mana arah itu."], "delay": 1000, "expectInput": true }
+    ],
+    "yesAction": { "type": "nextScene", "target": 1, "text": "Mau tahu apa yang ditunjuk oleh Tuanku?" },
+    "noAction": { "type": "nextScene", "target": 2, "text": "Lanjut saja " },
+    "otherAction": { "text": "atau tanya yang lain?" }
+  },
+  {
+    "id": 1,
+    "script": "Mari kita lanjutkan ceritanya...",
+    "media": [
+      {
+        "type": "video",
+        "filePath": "/videos/Scene-1.mp4",
+        "description": "Tontonlah video ini"
+      }
+    ],
+    "messages": ["Mari kita lanjutkan cerita..."],
+    "autoAction": { 
+      "type": "autoNext", 
+      "target": 2, 
+      "delay": 5000 
+    }
+  },
+  {
+    "id": 2,
+    "script": "asd",
+    "messages": [
+      { "text": ["Orang-orang sering berdebat soal arah patung ini "], "delay": 2000 },
+      { "text": ["Patung kuda ini, Apakah itu simbol perlawanan, masa depan, atau sekadar gaya sang pemimpin saat beraksi. Aku sendiri punya banyak pertanyaan—kenapa aku ada di sini? Kenapa patung-patung Tuanku selalu digambarkan menunggangiku?"], "delay": 15000 },
+      { "text": ["Seringkali, orang lupa bercerita tentang peranku. Padahal, tanpa aku, mungkin Tuanku tak bisa menaklukkan gunung, menyeberangi sungai, atau memimpin perang. "], "delay": 6000 },
+      { "text": ["Mungkin itulah sebabnya pematung menggambarkan kami bersama—karena hubungan kami istimewa. Tak semua orang bisa menunggang kuda, dan tak semua kuda bisa diajak berperang"], "delay": 2000 },
+      { "text": ["Mau tahu mengapa kuda penting dalam sejarah bangsa? "], "delay": 1000, "expectInput": true }
+    ],
+    "yesAction": { "type": "nextScene", "target": 3, "text": "Ya" },
+    "noAction": { "type": "nextScene", "target": 4, "text": "Aku ingin melanjutkan jalan saja" },
+    "otherAction": { "text": "kau ingin tanya yang lain?" }
+  },
+  {
+    "id": 3,
+    "script": "asd",
+    "media": [
+      {
+        "type": "video",
+        "filePath": "/videos/Scene-2.mp4",
+        "description": "Tonton ini"
+      },
+      {
+        "type": "pdf",
+        "filePath": "/Scene-2-Book.pdf",
+        "description": "Aku kurang pandai membaca—lebih baik kamu cek ini lagi."
+      }
+    ],
+    "messages": [
+      { "text": ["silahkan baca dan lihat perlahan, aku memberimu waktu"], "delay": 1000, "expectInput": false }
+    ],
+    "autoAction": { 
+      "type": "autoNext", 
+      "target": 4, 
+      "delay": 15000 
+    }
+  },
+  {
+    "id": 4,
+    "script": "asd",
+    "messages": [
+      { "text": ["Ironisnya, peranku sering terlupakan. "], "delay": 2000 },
+      { "text": ["Padahal aku berdiri di titik strategis, tempat orang-orang bisa mengenang sejarah dan merasa bangga. Lucunya, setiap masa memberi pijakanku warna berbeda—kadang hijau, biru, merah—entah apa maksudnya. Yang jelas, aku bukan sekadar hiasan taman."], "delay": 10000 },
+      { "text": ["Meskipun, ya, kadang kami cuma jadi dekorasi."], "delay": 2000 },
+      { "text": ["Teman-temanku juga begitu—berdiri tegak di taman, di halaman gedung besar. Polanya selalu sama, di mana pun: taman, bangunan penting, lalu di tengahnya patung kuda dan penunggangnya. Seolah-olah sejarah kami saling terhubung, melintasi batas negara dan waktu.Mungkin seniman yang membuatku terinspirasi dari patung-patung pahlawan di Eropa, lalu memadukannya dengan sosok Tuanku."], "delay": 15000 },
+      { "text": ["Tapi lucunya, beberapa teman kudaku malah membawa penunggang yang dulu adalah musuh Tuanku. Aku ingat betul—kami pernah dibawa ke medan perang untuk melawan orang-orang itu, yang kulit dan rambutnya terang, seperti tak pernah terpapar matahari."], "delay": 11000 },
+      { "text": ["Tapi di tengah perang itu, aku juga bertemu kuda-kuda mereka. Kami sempat saling mengenal, sebelum akhirnya harus saling menerjang. Ironis, ya? Sesama kuda, tapi ikut dalam perang yang bukan milik kami. Aku bisa tunjukkan foto-foto mereka dari negara lain—temanku sempat kirim lewat telepati."], "delay": 2000 },
+      { "text": ["Mau lihat patung teman-temanku dan tuannya?", "Apakah mau aku perlihatkan gambarnya?", "Mau kulihatkan contohnya?"], "delay": 1000, "expectInput": true }
+    ],
+    "yesAction": { "type": "nextScene", "target": 5, "text": "Ya" },
+    "noAction": { "type": "nextScene", "target": 6, "text": "Tidak perlu, ayo lanjut " },
+    "otherAction": { "text": "atau tanya yang lain?" }
+  },
+  {
+    "id": 5,
+    "script": "asd",
+    "media": [
+      {
+        "type": "video",
+        "filePath": "/videos/Scene-3.mp4",
+        "description": "Ini gambar teman-temanku"
+      }
+    ],
+    "messages": [
+      { "text": ["selesaikan dulu, waktu kita masih panjang"], "delay": 1000, "expectInput": false }
+    ],
+    "autoAction": { 
+      "type": "autoNext", 
+      "target": 6, 
+      "delay": 5000 
+    }
+  },
+
+  {
+    "id": 6,
+    "script": "asd",
+    "messages": [
+      { "text": ["Aku ingin kalian mengenal mereka juga. Siapa tahu, cerita kami saling terhubung. Tapi aku tetap bertanya-tanya—kenapa tidak diletakkan di hutan, tempat kuda seharusnya hidup? Meski sekarang aku cuma batu, bentukku masih seekor kuda"], "delay": 10000 },
+      { "text": ["Sebenarnya… aku benci taman. Kuda tidak hidup di taman. Tapi aku patung. Tapi aku kuda. Aku bingung! Mungkin, pada akhirnya, aku dan Tuanku di atas sana hanyalah bagian dari proyek pertamanan kota Makassar?"], "delay": 1000, "expectInput": true }
+    ],
+    "yesAction": { "type": "nextScene", "target": 7, "text": "Apa yang mereka pikirkan tentangku sekarang?" },
+    "noAction": { "type": "nextScene", "target": 8, "text": "Sepertinya aku sudah tahu" },
+    "otherAction": { "text": "atau ada opini lain?" }
+  },
+  {
+    "id": 7,
+    "script": "asd",
+    "media": [
+      {
+        "type": "video",
+        "filePath": "/videos/Scene-4.mp4",
+        "description": "Sekarang ini gambar-gambarku sayangnya tidak ada selfie"
+      }
+    ],
+    "messages": [
+      { "text": ["semoga kau masih menyukai ku sampai sini"], "delay": 1000, "expectInput": false }
+    ],
+    "autoAction": { 
+      "type": "autoNext", 
+      "target": 8, 
+      "delay": 5000 
+    }
+  },
+  {
+    "id": 8,
+    "script": "asd",
+    "messages": [
+      { "text": ["Tapi lebih dari itu—coba kalian perhatikan—pose kami bukan sembarang gaya. Patung-patung kuda seperti kami dibuat dengan simbolik, bukan untuk sekadar tampil keren di Instagram."], "delay": 10000 },
+      { "text": ["Pernahkah kalian bayangkan, betapa sulitnya membentuk patung kuda? Tidak mungkin dibuat tanpa makna. Setiap detail punya arti, karena kami bukan hanya patung, kami bagian dari Tuanku. Kami satu cerita, satu jejak sejarah."], "delay": 2000 },
+      { "text": ["Mau tahu arti pose patung kuda?", "Apakah kita bahas maknanya?", "Penasaran dengan simbol pose ini?"], "delay": 1000, "expectInput": true }
+    ],
+    "yesAction": { "type": "nextScene", "target": 9, "text": "Aku penasaran" },
+    "noAction": { "type": "nextScene", "target": 10, "text": "Kuda sama saja dimana-mana" },
+    "otherAction": { "text": "Bagaimana kamu bisa mengingat masa lalu?" }
+  },
+  {
+    "id": 9,
+    "script": "asd",
+    "media": [
+      {
+        "type": "audio",
+        "filePath": "/Scene-5.mp3",
+        "description": "Dengarkan! ini pernah kudengar sebagai podcast"
+      }
+    ],
+    "messages": [
+      { "text": ["Tidak perlu buru-buru, silahkan duduk dulu"], "delay": 1000, "expectInput": false }
+    ],
+    "autoAction": { 
+      "type": "autoNext", 
+      "target": 10, 
+      "delay": 5000 
+    }
+  },
+
+  {
+    "id": 10,
+    "script": "asd",
+    "messages": [
+      { "text": ["Nah, di tempat ini, semua orang yang datang ke sini bisa melihat kegagahan Sultan Hasanuddin."], "delay": 2000 },
+      { "text": ["Aku melihat anak-anak berlarian, orang tua bercerita, dan wisatawan mengambil foto. Mereka memandang kami dan mengenang masa lalu.  Jika kamu melewatiku - si patung kuda , apa yang kalian pikirkan?"], "delay": 20000 },
+      { "text": ["Atau kadang cuma sebagai sandaran duduk. Karena aku dari beton. Aku tidak pernah bergerak. Kakiku terpatri di atas fondasi biru dan putih ini. Tapi dalam diamku, aku terus bermimpi. Tapi aku bertahan, karena sang pembisik kawan setiaku. Maukah kau aku kenalkan dengan dia?Maukah aku ajak kalian ke tempat si pembisik?"], "delay": 2000 },
+      { "text": ["Ayo kesana! ikuti peta ini"], "video": "/videos/PanjogaJalan.mp4", "delay": 1000 },
+      { "text": ["Lalu jalan ke tempat tersebut, sambil dengarkan suara ini"], "audio": "/Scene-6.mp3", "delay": 1000 },
+      { "text": ["Beritahu aku jika kalian sudah sampai, aku akan ceritakan mimpiku tentang si pembisik."], "delay": 60000 },
+      { "text": ["Apakah kau sudah sampai di Bastion buton? Lihat bangunan hijau di tengah halaman?"], "delay": 1000, "expectInput": true }
+    ],
+    "yesAction": { "type": "nextScene", "target": 11, "text": "Ya, saya sudah sampai" },
+    "noAction": { "type": "redirect", "target": "/", "text": "Tidak, saya tidak mau melanjutkan" }
+  },
+  {
+    "id": 11,
+    "script": "asd",
+    "messages": [
+      { "text": ["Jika kau sudah sampai di Bastion Buton, lihatlah ke arah halaman. "], "delay": 2000 },
+      { "text": ["Di sana ada bangunan kecil berwarna hijau, di dekat pohon kelapa. Tahukah kamu itu untuk apa? siapa yang tinggal disana?"], "delay": 20000 },
+      { "text": ["Jadi dulu, yang tinggal disitu itu adalah si pembisik. Aku lupa namanya…Tenriabeng, mungkin? ingatan kuda betul-betul pendek."], "delay": 2000 },
+      { "text": ["Ia seorang perempuan berdarah dewa—dialah yang tadi bernyanyi di telinga kalian sepanjang perjalanan. Mimpi... oh Tenri. Suaranya halus, seperti angin menyusup di sela-sela dinding tua benteng ini. "], "delay": 2000 },
+      { "text": ["Aku bertemu dengannya dulu, saat kami  masih hidup, ketika aku bukan patung, saat dinding benteng masih sering bergetar oleh langkah para prajurit. Ia tidak seperti yang lain. "], "delay": 5000 },
+      { "text": ["Aku ingat, Ia tidak pernah menarik tali kekangku, tidak pernah memerintah dengan suara keras. Ia hanya berdiri di hadapanku, menghembuskan napas perlahan, menyentuh leherku dengan tangan yang ringan seperti angin laut."], "delay": 3000 },
+      { "text": ["Ia juga bukan prajurit, tapi dia tahu bahasaku. Dia tahu saat aku takut, saat aku lelah, saat aku rindu padang rumput. Kadang ia duduk di sampingku dan menyanyikan lagu pelan—seperti syair lama yang hanya dipahami oleh batu-batu dan binatang. "], "delay": 4000 },
+      { "text": ["Orang-orang menyebutnya aneh, tapi aku tahu: dia adalah pembisik. Di tanah Makassar, orang seperti dia jarang, tapi mereka ada—yang percaya bahwa kuda punya sumanga’, punya semangat. "], "delay": 4000 },
+      { "text": ["Aku masih ingat matanya yang teduh. Ia tak banyak bicara pada manusia, tapi ia bicara padaku. Dalam bahasa yang bukan kata, tapi gerak dan napas. Ia tahu bahwa aku tak suka pelana terlalu ketat, tahu aku ingin menyentuh air, tahu aku bukan alat perang, tapi sahabat setia. Apakah kau merasakannya sekarang?"], "delay": 20000 },
+      { "text": ["Konon, orang-orang seperti dia dulu menyanyikan mantra sebelum pasukan berangkat perang. Mereka percaya, kuda bukan hanya tubuh, tapi jiwa. Jika kudanya marah atau sedih, maka perang bisa kalah. Dan jika kudanya percaya, maka tuannya pun akan selamat."], "delay": 4000 },
+      { "text": ["Aku tak tahu ke mana pembisik itu sekarang. Tapi setiap malam, dalam mimpiku, aku masih mendengar suaranya. Ia tidak memerintahku untuk lari. "], "delay": 4000 },
+      { "text": ["Ia hanya berbisik, “Tenang, Pajonga. Kau tidak sendiri.” Ia pun juga berbisik kepada kuda-kuda di jalanan yang meregang , membawa beban berat menahan panas, tapi harus bergerak, seperti mesin. Seperti, aku, yang kini hanya batu. "], "delay": 4000 },
+      { "text": ["Tidak jauh dari rumahnya disini, Pembisik juga suka jalan-jalan ke rumah disebrangnya….ia juga suka bercengkrama dengan salah satu anak yang tinggal disana, aduh aku lupa namanya. Pembisik bilang dia suka berkeliling ke dalam rumah. "], "delay": 4000 },
+      { "text": ["Tapi, tahukah kalian, pembisik kuda itu memang ada sejak dulu. Mau ku ceritakan lebih lanjut tentangnya?"], "delay": 1000, "expectInput": true }
+    ],
+    "yesAction": { "type": "nextScene", "target": 12, "text": "Siapa itu pembisik kuda?" },
+    "noAction": { "type": "nextScene", "target": 13, "text": "Aku mau Lanjut saja" },
+    "otherAction": { "text": "Apa pendapatmu?" }
+  },
+  {
+  "id": 12,
+  "script": "asd",
+  "media": [
+    {
+      "type": "audio",
+      "filePath": "/Pajonga-PembisikKuda.mp3",
+      "description": "Putar pelan-pelan ya tidak ada yang akan mengganggumu"
+    }
+  ],
+  "media": [
+    {
+      "type": "audio",
+      "filePath": "/Pajonga-PembisikKudaEn.mp3",
+      "description": "English version"
+    }
+  ],
+  "messages": [
+    { "text": ["dengarkan dengan tenang, tidak akan ada yang mengganggumu"], "delay": 1000, "expectInput": false }
+  ],
+  "autoAction": { 
+    "type": "autoNext", 
+    "target": 13, 
+    "delay": 5000 
+  }
+},
+  {
+    "id": 13,
+    "script": "asd",
+    "messages": [
+      { "text": ["Si pembisik kuda sering muncul dalam mimpiku....."], "delay": 4000 },
+      { "text": ["Kadang, saat malam tiba dan suara manusia mulai menjauh, aku—Pajonga—terlelap dalam diamku. Tapi tubuh beton ini masih bisa bermimpi. Dan dalam mimpiku, aku bukan patung. Aku hidup kembali, di halaman Benteng yang pernah menjadi rumahku—sebelum aku jadi lambang, sebelum aku jadi hiasan taman."], "delay": 4000 },
+      { "text": ["Orang-orang Makassar dulu memandang kuda bukan hanya sebagai alat transportasi atau kendaraan perang. Kuda adalah sahabat, simbol kekuatan dan kebanggaan."], "delay": 2000 },
+      { "text": ["Mereka menaruh hormat pada langkah-langkah kami, suara derap kami yang menggema di jalanan tanah dan lorong batu benteng."], "delay": 2000 },
+      { "text": ["Di dalam mimpiku, aku mengingat masa lalu. "], "delay": 2000 },
+      { "text": ["Tahun 1970, Benteng ini belum menjadi tempat wisata. Di salah satu sudut bastion, aku sering melihat seorang anak kecil, anak dari keluarga militer yang tinggal di dalam benteng. Ia suka diam-diam datang ke tempatku saat tidak ada yang melihat, lalu menyentuh tubuhku, kadang bicara, seolah aku bisa menjawab. "], "delay": 2000 },
+      { "text": ["Ia sangat mencintai kuda, mungkin karena didikan keluarganya yang penuh disiplin. Ia bukan prajurit, tapi imajinasinya menunggangiku lebih jauh dari medan perang manapun."], "delay": 4000 },
+      { "text": ["Aku lupa nama anak itu.  Tapi suatu hari, kudengar kabar: ia tumbuh besar dan menjadi direktur benteng ini. Mungkin ia masih ingat aku."], "delay": 3000 },
+      { "text": [" Atau mungkin ia melihatku tak lagi sebagai kuda, hanya sebagai monumen. Tapi aku masih ingat dia. Aku tahu rasanya dilatih untuk taat, tapi ingin bebas. Atau mungkin, kami berdua hanya ingin tahu, seperti rakyat lainnya, kemana sebenarnya arah yang ditunjuk oleh tangan tuanku ini ?"], "delay": 4000 },
+      { "text": ["Masih ingat, I la Galigo kan? Apa yang kau ingat dari ceritanya?"], "delay": 20000 },
+      { "text": ["Museum yang ada di dalam itu, apa hubungannya dengan benteng? Apakah kamu tahu?"], "delay": 15000 },
+      { "text": ["setahuku beberapa kali aku menemani tuanku melawan Bugis. Kenapa lalu museum itu tiba-tiba ada di dalam benteng? "], "delay": 20000 },
+      { "text": ["Sungguh, aku memperkarakan kenapa aku di taman,hilang rumah bastion itu, yang tadiya benteng menjadi museum, yang tadinya itu tempat bukan Bugis, sekarang jadi Bugis, jadi sejarah itu apa? Apa aku yang salah mengingat? Menurut kalian, sejarah itu apa? "], "delay": 20000 },
+      { "text": ["Menurut kalian, apakah kuda masuk dalam sejarah? hewan, tumbuhan, dan benda-benda lain di sekeliling kalian…jika bisa berbicara, apa yang mereka ingat? Aku akan cerita tentang  Ingatan tradisi Makassar akan aku."], "delay": 2000 },
+      { "text": [" Dengarkan!"], "audio": "/PajongaKudaTradisi.mp3", "delay": 3000 },
+      { "text": [" Listen! "], "audio": "/PajongaKudaTradisiEn.mp3", "delay": 3000 },
+      { "text": ["Setelah ini, aku akan memanggil si pembisik untuk bertemu denganmu. Bersiaplah!"], "delay": 1000, "expectInput": true }
+    ],
+    "yesAction": { "type": "redirect", "target": "/tenri", "text": "Aku mau bertemu pembisik" },
+    "noAction": { "type": "redirect", "target": "/", "text": "Tidak" },
+    "otherAction": { "text": "Aku mau pulang saja " }
+  }
+]

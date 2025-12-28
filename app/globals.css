@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+:root {
+  --font-saira: "Saira", sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.roboto-mono {
+  font-family: "Roboto Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
+.saira {
+  font-family: "Saira", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 125;
+}
+
+/* Prayer Float Animation */
+@keyframes prayerFloat {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  20% {
+    transform: translateY(-20px) scale(1.05);
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-40px) scale(1.1);
+    opacity: 0.9;
+  }
+  60% {
+    transform: translateY(-60px) scale(1.15);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translateY(-80px) scale(1.2);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-100px) scale(1.25);
+    opacity: 0;
+  }
+}
+
+/* Prayer Vaporize Animation - Words start from center, spread to random positions, and vaporize upward */
+@keyframes prayerVaporize {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+    filter: blur(0px) brightness(1);
+  }
+  20% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 1;
+    filter: blur(0px) brightness(1.2);
+  }
+  40% {
+    transform: translate(calc(-50% + var(--target-x) * 0.3), calc(-50% + var(--target-y) * 0.3 - 50px)) scale(1.2);
+    opacity: 0.9;
+    filter: blur(1px) brightness(1.1);
+  }
+  60% {
+    transform: translate(calc(-50% + var(--target-x) * 0.6), calc(-50% + var(--target-y) * 0.6 - 100px)) scale(1.3);
+    opacity: 0.6;
+    filter: blur(2px) brightness(0.8);
+  }
+  80% {
+    transform: translate(calc(-50% + var(--target-x) * 0.8), calc(-50% + var(--target-y) * 0.8 - 150px)) scale(1.4);
+    opacity: 0.3;
+    filter: blur(4px) brightness(0.5);
+  }
+  100% {
+    transform: translate(calc(-50% + var(--target-x)), calc(-50% + var(--target-y) - 200px)) scale(1.5);
+    opacity: 0;
+    filter: blur(8px) brightness(0.2);
+  }
+}
+
+/* Prayer Vaporize Up Animation - Words start from random positions and move upward off screen */
+@keyframes prayerVaporizeUp {
+  0% {
+    transform: translate(calc(-50% + var(--start-x)), calc(-50% + var(--start-y))) scale(1);
+    opacity: 1;
+    filter: blur(0px) brightness(1);
+  }
+  20% {
+    transform: translate(calc(-50% + var(--start-x)), calc(-50% + var(--start-y) - 50px)) scale(1.1);
+    opacity: 1;
+    filter: blur(0px) brightness(1.2);
+  }
+  40% {
+    transform: translate(calc(-50% + var(--start-x) + var(--end-x) * 0.3), calc(-50% + var(--start-y) - 150px)) scale(1.2);
+    opacity: 0.9;
+    filter: blur(1px) brightness(1.1);
+  }
+  60% {
+    transform: translate(calc(-50% + var(--start-x) + var(--end-x) * 0.6), calc(-50% + var(--start-y) - 250px)) scale(1.3);
+    opacity: 0.6;
+    filter: blur(2px) brightness(0.8);
+  }
+  80% {
+    transform: translate(calc(-50% + var(--start-x) + var(--end-x) * 0.8), calc(-50% + var(--start-y) - 350px)) scale(1.4);
+    opacity: 0.3;
+    filter: blur(4px) brightness(0.5);
+  }
+  100% {
+    transform: translate(calc(-50% + var(--start-x) + var(--end-x)), calc(-50% + var(--start-y) + var(--end-y))) scale(1.5);
+    opacity: 0;
+    filter: blur(8px) brightness(0.2);
+  }
+}
+
+/* Logo Pattern Animation */
+@keyframes logoPattern {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: brightness(1) contrast(1);
+  }
+  5% {
+    transform: scale(1.1) rotate(5deg);
+    filter: brightness(1.2) contrast(1.1);
+  }
+  10% {
+    transform: scale(0.95) rotate(-3deg);
+    filter: brightness(0.9) contrast(1.2);
+  }
+  15% {
+    transform: scale(1.05) rotate(2deg);
+    filter: brightness(1.1) contrast(1.05);
+  }
+  20% {
+    transform: scale(0.98) rotate(-1deg);
+    filter: brightness(0.95) contrast(1.1);
+  }
+  25% {
+    transform: scale(1.02) rotate(1deg);
+    filter: brightness(1.05) contrast(1.02);
+  }
+  30% {
+    transform: scale(0.99) rotate(-0.5deg);
+    filter: brightness(0.98) contrast(1.05);
+  }
+  35% {
+    transform: scale(1.01) rotate(0.3deg);
+    filter: brightness(1.02) contrast(1.01);
+  }
+  40% {
+    transform: scale(0.995) rotate(-0.2deg);
+    filter: brightness(0.99) contrast(1.02);
+  }
+  45% {
+    transform: scale(1.005) rotate(0.1deg);
+    filter: brightness(1.01) contrast(1.005);
+  }
+  50% {
+    transform: scale(1.1) rotate(3deg);
+    filter: brightness(1.15) contrast(1.1);
+  }
+  55% {
+    transform: scale(0.9) rotate(-2deg);
+    filter: brightness(0.85) contrast(1.15);
+  }
+  60% {
+    transform: scale(1.08) rotate(1.5deg);
+    filter: brightness(1.12) contrast(1.08);
+  }
+  65% {
+    transform: scale(0.92) rotate(-1deg);
+    filter: brightness(0.88) contrast(1.12);
+  }
+  70% {
+    transform: scale(1.06) rotate(0.8deg);
+    filter: brightness(1.08) contrast(1.06);
+  }
+  75% {
+    transform: scale(0.94) rotate(-0.5deg);
+    filter: brightness(0.92) contrast(1.08);
+  }
+  80% {
+    transform: scale(1.04) rotate(0.3deg);
+    filter: brightness(1.04) contrast(1.04);
+  }
+  85% {
+    transform: scale(0.96) rotate(-0.2deg);
+    filter: brightness(0.96) contrast(1.04);
+  }
+  90% {
+    transform: scale(1.02) rotate(0.1deg);
+    filter: brightness(1.02) contrast(1.02);
+  }
+  95% {
+    transform: scale(0.98) rotate(-0.1deg);
+    filter: brightness(0.98) contrast(1.02);
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: brightness(1) contrast(1);
+  }
+}
+
+/* Flip Animation for Upper and Lower Logos */
+@keyframes logoFlip {
+  0% {
+    transform: scale(1) rotateY(0deg);
+  }
+  25% {
+    transform: scale(1.1) rotateY(90deg);
+  }
+  50% {
+    transform: scale(0.9) rotateY(180deg);
+  }
+  75% {
+    transform: scale(1.1) rotateY(270deg);
+  }
+  100% {
+    transform: scale(1) rotateY(360deg);
+  }
+}
+
+/* Breathing Animation for Middle Logo */
+@keyframes logoBreathing {
+  0% {
+    transform: scale(1);
+    filter: brightness(1) saturate(1);
+  }
+  25% {
+    transform: scale(1.15);
+    filter: brightness(1.1) saturate(1.2);
+  }
+  50% {
+    transform: scale(1.25);
+    filter: brightness(1.2) saturate(1.4);
+  }
+  75% {
+    transform: scale(1.15);
+    filter: brightness(1.1) saturate(1.2);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1) saturate(1);
+  }
+}
