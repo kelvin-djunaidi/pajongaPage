@@ -1,0 +1,4 @@
+participant_id,timestamp,event_type,event_name,scene_id,data
+b9965371-3de7-4c77-8125-13aaa5edbb9a,2025-12-29T07:32:30.693Z,SYSTEM,gps_error,,"{""error"":""User denied request for Geolocation"",""code"":1}"
+b9965371-3de7-4c77-8125-13aaa5edbb9a,2025-12-29T07:32:30.693Z,SYSTEM,gps_error,,"{""error"":""User denied request for Geolocation"",""code"":1}"
+b9965371-3de7-4c77-8125-13aaa5edbb9a,2025-12-29T07:32:34.438Z,SYSTEM,session_end,,"{""reason"":""page_unload""}"
