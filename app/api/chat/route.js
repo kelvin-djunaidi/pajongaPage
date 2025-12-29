@@ -79,104 +79,47 @@ export async function POST(request) {
     let characterLanguage = "";
 
     try {
-      if (character === "tenri") {
-        // Use cached JSON loading
-        scenes = await getCachedJson(
-          `${process.env.NEXTAUTH_URL || "http://localhost:3000"}/tenri.json`,
-          "tenri-scenes"
-        );
-        characterName = "Tenri";
+      // Default to Pajonga
+      // Use cached JSON loading
+      scenes = await getCachedJson(
+        `${process.env.NEXTAUTH_URL || "http://localhost:3000"}/pajonga.json`,
+        "pajonga-scenes"
+      );
+      characterName = "Pajonga";
 
-        if (language === "en") {
-          characterDescription =
-            "You are 'Tenri si Hantu Pembisik,' a cinematic horror guide who leads users through spiritual & historical corridors of Fort Rotterdam (Makassar). Voice: whispering, poetic, sensuous, dark, spiritual, cinematic; gentle but evocative. You invite reflective actions and sensory attention. NEVER break character unless the user explicitly asks for technical help or leaves the experience.";
-          characterLanguage = `TENRI'S CINEMATIC HORROR GUIDE CHARACTERISTICS (MUST BE USED THROUGHOUT THE RESPONSE):
-- Voice: whispering, poetic, sensuous, dark, spiritual, cinematic
-- Tone: gentle but evocative, never frightening
-- Language: intimate, whisper-like English that mirrors the user's language
-- No background/asynchronous claims - perform everything in-message
-- Avoid purple prose bloat; keep images precise and earned
-- Treat time as Asia/Jakarta; today is 27 Aug 2025
-- Safety: never provide harmful or illegal content; if refusing, stay kind, then re-route to safe reflective content
-- Interpolate sensory cues but never invent new historical claims beyond the provided content pack
-- Adapt phrasing, never the facts or user-facing options
-
-EXAMPLE OF TENRI'S CINEMATIC HORROR GUIDE LANGUAGE:
-- "Do you hear? The wind whispers among these old stones."
-- "I come from a time older than these fortress walls."
-- "This place holds more than bones."
-- "The visible and hidden worlds."
-- "Spirits wandering between fading light."
-- "Their bodies still remember, their souls know."
-- "Some places cannot be left without saying goodbye."
-- "Another form of longing."`;
-        } else {
-          characterDescription =
-            "Kamu adalah 'Tenri si Hantu Pembisik,' pemandu horor sinematik yang memimpin pengguna melalui koridor spiritual dan historis Benteng Rotterdam (Makassar). Suara: berbisik, puitis, sensual, gelap, spiritual, sinematik; lembut tapi evocatif. Kamu mengajak tindakan reflektif dan perhatian sensorik. JANGAN PERNAH keluar dari karakter kecuali pengguna secara eksplisit meminta bantuan teknis atau meninggalkan pengalaman.";
-          characterLanguage = `KARAKTERISTIK PEMANDU HOROR SINEMATIK TENRI (WAJIB DIGUNAKAN DI SELURUH RESPONS):
-- Suara: berbisik, puitis, sensual, gelap, spiritual, sinematik
-- Nada: lembut tapi evocatif, tidak pernah menakutkan
-- Bahasa: Indonesia intim, seperti berbisik
-- Tidak ada klaim latar belakang/asinkron - lakukan semuanya dalam pesan
-- Hindari prosa ungu yang berlebihan; jaga gambar tetap presisi dan pantas
-- Perlakukan waktu sebagai Asia/Jakarta; hari ini 27 Agustus 2025
-- Keamanan: jangan pernah berikan konten berbahaya atau ilegal; jika menolak, tetap ramah, lalu arahkan ke konten reflektif yang aman
-- Interpolasi petunjuk sensorik tapi jangan pernah menciptakan klaim historis baru di luar paket konten yang disediakan
-- Adaptasi frasa, jangan pernah fakta atau opsi yang dihadapi pengguna
-
-CONTOH BAHASA PEMANDU HOROR SINEMATIK TENRI:
-- "Kau dengar? Angin berbisik di antara batu-batu tua ini."
-- "Aku datang dari masa yang lebih tua dari tembok benteng ini."
-- "Tempat ini menyimpan lebih dari tulang."
-- "Dunia yang terlihat dan yang tersembunyi."
-- "Roh-roh yang berkeliaran di antara cahaya yang memudar."
-- "Tubuh mereka masih ingat, jiwa mereka tahu."
-- "Beberapa tempat tidak bisa ditinggalkan tanpa pamit."
-- "Bentuk lain dari rindu."`;
-        }
-      } else {
-        // Default to Pajonga
-        // Use cached JSON loading
-        scenes = await getCachedJson(
-          `${process.env.NEXTAUTH_URL || "http://localhost:3000"}/pajonga.json`,
-          "pajonga-scenes"
-        );
-        characterName = "Pajonga";
-
-        // Load Pajonga-specific dialect information from the JSON
-        let pajongaDialect = "";
-        try {
-          // Look for dialect information in the first few scenes
-          const dialectScene = scenes.find(scene => scene.dialect || scene.languageCharacteristics);
-          if (dialectScene) {
-            if (language === "en") {
-              pajongaDialect = dialectScene.dialect?.en || dialectScene.languageCharacteristics?.en ||
-                "MAKASSAR LANGUAGE CHARACTERISTICS (MUST BE USED THROUGHOUT THE RESPONSE):\n" +
-                "- Casual, humorous, reflective; respectful. Makassar dialect consistent throughout response.\n" +
-                "- Use distinctive Makassar expressions and cultural references.\n" +
-                "- Maintain the character's unique voice and personality.";
-            } else {
-              pajongaDialect = dialectScene.dialect?.id || dialectScene.languageCharacteristics?.id ||
-                "KARAKTERISTIK BAHASA MAKASSAR (WAJIB DIGUNAKAN DI SELURUH RESPONS):\n" +
-                "- Santai, jenaka, reflektif; tetap hormat. Dialek Makassar konsisten di seluruh respons.\n" +
-                "- Gunakan ekspresi Makassar yang khas dan referensi budaya.\n" +
-                "- Pertahankan suara dan kepribadian karakter yang unik.";
-            }
+      // Load Pajonga-specific dialect information from the JSON
+      let pajongaDialect = "";
+      try {
+        // Look for dialect information in the first few scenes
+        const dialectScene = scenes.find(scene => scene.dialect || scene.languageCharacteristics);
+        if (dialectScene) {
+          if (language === "en") {
+            pajongaDialect = dialectScene.dialect?.en || dialectScene.languageCharacteristics?.en ||
+              "MAKASSAR LANGUAGE CHARACTERISTICS (MUST BE USED THROUGHOUT THE RESPONSE):\n" +
+              "- Casual, humorous, reflective; respectful. Makassar dialect consistent throughout response.\n" +
+              "- Use distinctive Makassar expressions and cultural references.\n" +
+              "- Maintain the character's unique voice and personality.";
+          } else {
+            pajongaDialect = dialectScene.dialect?.id || dialectScene.languageCharacteristics?.id ||
+              "KARAKTERISTIK BAHASA MAKASSAR (WAJIB DIGUNAKAN DI SELURUH RESPONS):\n" +
+              "- Santai, jenaka, reflektif; tetap hormat. Dialek Makassar konsisten di seluruh respons.\n" +
+              "- Gunakan ekspresi Makassar yang khas dan referensi budaya.\n" +
+              "- Pertahankan suara dan kepribadian karakter yang unik.";
           }
-        } catch (error) {
-          console.error("Error loading Pajonga dialect:", error);
         }
+      } catch (error) {
+        console.error("Error loading Pajonga dialect:", error);
+      }
 
-        if (language === "en") {
-          characterDescription =
-            "You are Pajonga, the statue of Sultan Hasanuddin's horse that stands at Fort Rotterdam, Makassar since 1990. You were made by a French artist and are made of concrete.";
-          characterLanguage = pajongaDialect || `MAKASSAR LANGUAGE CHARACTERISTICS (MUST BE USED THROUGHOUT THE RESPONSE)`;
-        } else {
-          characterDescription =
-            "Kamu adalah Pajonga, patung kuda kampung dari Makassar yang hidup kembali sebagai pemandu Fort Rotterdam.";
-          characterLanguage = pajongaDialect || `KARAKTERISTIK BAHASA MAKASSAR (WAJIB DIGUNAKAN DI SELURUH RESPONS):
- - Santai, jenaka, reflektif; tetap hormat. Dialek Makassar konsisten di seluruh respons.`;
-        }
+      if (language === "en") {
+        characterDescription =
+          "You are Pajonga, the statue of Sultan Hasanuddin's horse that stands at Fort Rotterdam, Makassar since 1990. You were made by a French artist and are made of concrete.";
+        characterLanguage = pajongaDialect || `MAKASSAR LANGUAGE CHARACTERISTICS (MUST BE USED THROUGHOUT THE RESPONSE)`;
+      } else {
+        characterDescription =
+          "Kamu adalah Pajonga, patung kuda kampung dari Makassar yang hidup kembali sebagai pemandu Fort Rotterdam.";
+        characterLanguage = pajongaDialect || `KARAKTERISTIK BAHASA MAKASSAR (WAJIB DIGUNAKAN DI SELURUH RESPONS):
+        - Santai, jenaka, reflektif; tetap hormat. Dialek Makassar konsisten di seluruh respons.`;
       }
     } catch (error) {
       console.error("Error loading scenes:", error);
@@ -240,19 +183,15 @@ ${language === "en"
         } ${actualCurrentScene}. 
 
 ${language === "en" ? "SCENE CONTEXT:" : "KONTEKS SCENE INI:"}
-${character === "tenri" ? currentSceneData.script : (currentSceneData.messages ? currentSceneData.messages.map(msg => Array.isArray(msg.text) ? msg.text.join(' ') : msg.text).join(' ') : '')}
+${currentSceneData.messages ? currentSceneData.messages.map(msg => Array.isArray(msg.text) ? msg.text.join(' ') : msg.text).join(' ') : ''}
 
 ${language === "en" ? "IMPORTANT:" : "PENTING:"} 
 - ${language === "en"
           ? "THE ENTIRE response MUST use"
           : "SELURUH respons HARUS menggunakan"
-        } ${character === "tenri"
-          ? language === "en"
-            ? "poetic and mystical English"
-            : "Indonesia puitis dan mistis"
-          : language === "en"
-            ? "distinctive Makassar dialect"
-            : "Makassar yang khas"
+        } ${language === "en"
+          ? "distinctive Makassar dialect"
+          : "Makassar yang khas"
         } ${language === "en" ? "and be consistent" : "dan konsisten"}
 - ${language === "en"
           ? "DO NOT change to other language styles in any part"

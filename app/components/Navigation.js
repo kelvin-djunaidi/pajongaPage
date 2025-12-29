@@ -28,24 +28,6 @@ export default function Navigation({ showHomeLink = true, isMainPage = false, st
                 Home
               </div>
             )}
-            <div
-              className="cursor-pointer"
-              onClick={() => window.location.href = "/about"}
-            >
-              About
-            </div>
-            <div
-              className="cursor-pointer"
-              onClick={() => window.location.href = "/collaborations"}
-            >
-              Collaborations
-            </div>
-            <div
-              className="cursor-pointer"
-              onClick={() => window.location.href = "/team"}
-            >
-              Team
-            </div>
           </div>
 
           <Link href="https://instagram.com/tursalahjalan" target="_blank">
@@ -59,9 +41,8 @@ export default function Navigation({ showHomeLink = true, isMainPage = false, st
       )}
 
       <nav
-        className={`fixed top-[2svh] left-0 w-full h-fit px-[2svw] z-30 transition-opacity duration-1000 ease-in-out flex flex-col ${
-          isMainPage ? (state >= 2 ? "opacity-100" : "opacity-0") : "opacity-100"
-        }`}
+        className={`fixed top-[2svh] left-0 w-full h-fit px-[2svw] z-30 transition-opacity duration-1000 ease-in-out flex flex-col ${isMainPage ? (state >= 2 ? "opacity-100" : "opacity-0") : "opacity-100"
+          }`}
       >
         <div>
           <img
@@ -81,7 +62,7 @@ export default function Navigation({ showHomeLink = true, isMainPage = false, st
 
           <div className="flex items-center gap-[2svw]">
             <LanguageDropdown />
-            
+
             <button className="mb-[4svh] cursor-pointer" onClick={toggleMenu}>
               <img
                 src={isMenuOpen ? "/images/close.png" : "/images/hamburger.png"}
